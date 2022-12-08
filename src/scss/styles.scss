@@ -1,0 +1,155 @@
+/* Import all of Bootstrap's CSS */
+@import "~bootstrap/scss/bootstrap";
+
+/* custom fonts */
+@import url('https://api.fonts.coollabs.io/css2?family=Ubuntu:wght@400;700&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+:root {
+    /* colors */
+    --clr-dark-bg: #121212;
+    --clr-white: #FFFFFF;
+    --clr-yellow: #EAB308;
+    --clr-magenta: #D946EF;
+    --clr-blue: #3B82F6;
+    --clr-green: #22C55E;
+    --opacity-high: 87%;
+    /* Configurations */
+    -webkit-tap-highlight-color: transparent;
+}
+
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    text-rendering: optimizeSpeed;
+    background-color: var(--clr-dark-bg);
+}
+
+ol, ul {
+	list-style: none;
+}
+
+img, picture, svg, video {
+    display: block;
+    width: 100%;
+}
+
+.main {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--clr-white);
+    opacity: var(--opacity-high);
+    @media screen and (min-width: 768px) {
+        font-size: 3rem;
+    }
+}
+
+.array {
+    display: flex;
+    gap: .5rem;
+    @media screen and (min-width: 768px) {
+        gap: 1rem;
+    }
+    @media screen and (min-width: 992px) {
+        gap: 1.5rem;
+    }
+}
+
+.square {
+    border-radius: 8px;
+    padding-left: .7rem;
+    padding-right: .7rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--clr-dark-bg);
+    @media screen and (min-width: 768px) {
+        font-size: 2rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    @media screen and (min-width: 992px) {
+        font-size: 3rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+.initial-array .square {
+    background-color: var(--clr-blue);
+}
+
+.sort-button {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--clr-white);
+    opacity: var(--opacity-high);
+    background-color: var(--clr-green);
+    padding-left: 3rem;
+    padding-right: 3rem;
+    border-radius: 12px;
+    border: none;
+    @media screen and (min-width: 768px) {
+        font-size: 2rem;
+    }
+    @media screen and (min-width: 992px) {
+        font-size: 3rem;
+    }
+}
+
+.even .square {
+    background-color: var(--clr-yellow);
+}
+
+.odd .square {
+    background-color: var(--clr-magenta);
+}
+
+.final .square {
+    background-color: var(--clr-blue);
+}
+
+.sorting-row {
+    display: flex;
+    gap: .5rem;
+    margin-top: 1rem;
+    @media screen and (min-width: 768px) {
+        gap: 1rem;
+    }
+    @media screen and (min-width: 992px) {
+        gap: 1.5rem;
+    }
+}
